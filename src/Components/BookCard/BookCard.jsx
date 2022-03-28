@@ -19,17 +19,17 @@ export const BookCard = ({ id, imageUrl, title, price }) => {
   // <YourStyledLink to={}>
   //    title, image price etc here
   // </YourStyledLink>
-  const BooksDetail = styled.div``
+  const Card = styled.div``
   return(
     <>
-    <Link to={`/section/${id}`}>
-    <BooksDetail>
-      <div>
-        <img src={imageUrl}/>
-        <h2 className="title">{title}</h2>
-        <p className="price">{price}</p>
-      </div>
-    </BooksDetail>
+    <Link to={`/detail/${id}`}>
+      <Card>
+        <div className="bookCard">
+          <img src={imageUrl} alt="" />
+          <h2 className="title">{title}</h2>
+          <p className="price">{price}</p>
+        </div>
+      </Card>
     </Link>
     </>
   )
